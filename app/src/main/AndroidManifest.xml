@@ -15,7 +15,7 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="周子洋"
             android:theme="@style/Theme.S1131224">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

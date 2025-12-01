@@ -36,19 +36,16 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        // 👉 隱藏系統列（狀態列 + 導航列）
         hideSystemBars()
     }
 
     private fun hideSystemBars() {
         val controller = window.insetsController ?: return
 
-        // 隱藏狀態列 & 導航列
         controller.hide(
             WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars()
         )
 
-        // 沉浸模式：滑動可暫時喚出系統列
         controller.systemBarsBehavior =
             WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
     }
