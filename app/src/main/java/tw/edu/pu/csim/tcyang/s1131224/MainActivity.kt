@@ -1,12 +1,14 @@
 package tw.edu.pu.csim.tcyang.s1131224
 
 import android.content.pm.ActivityInfo
+import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -18,10 +20,11 @@ import tw.edu.pu.csim.tcyang.s1131224.ui.theme.S1131224Theme
 
 class MainActivity : ComponentActivity() {
 
+    @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
 
         enableEdgeToEdge()
 
@@ -39,6 +42,7 @@ class MainActivity : ComponentActivity() {
         hideSystemBars()
     }
 
+    @RequiresApi(Build.VERSION_CODES.R)
     private fun hideSystemBars() {
         val controller = window.insetsController ?: return
 
