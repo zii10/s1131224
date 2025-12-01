@@ -13,6 +13,7 @@
         android:theme="@style/Theme.S1131224">
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/Theme.S1131224">
             <intent-filter>
